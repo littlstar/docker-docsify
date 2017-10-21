@@ -1,5 +1,5 @@
 ## Container base
-from node:stable
+from node:latest
 maintainer "Joseph Werle <werle@littlstar.com>"
 
 ## Container labels
@@ -17,7 +17,7 @@ run mkdir -p /usr/local/docsify
 env DEBUG 0
 env PORT 3000
 env DOCSIFY_VERSION latest
-env NODE_VERSION stable
+env NODE_VERSION latest
 
 ## Container runtime configuration
 expose 3000
