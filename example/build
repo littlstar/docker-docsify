@@ -1,0 +1,4 @@
+#!/bin/bash
+docker build                      \
+  --tag littlstar/docsify/example \
+  $(pwd)

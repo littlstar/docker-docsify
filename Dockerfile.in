@@ -1,0 +1,30 @@
+## Container base
+from @DOCKER_BASE@:@NODE_VERSION@
+maintainer "Joseph Werle <werle@littlstar.com>"
+
+## Container labels
+label docker_docsify_version_major="@VERSION_MAJOR@"
+label docker_docsify_version_minor="@VERSION_MINOR@"
+label docker_docsify_version_patch="@VERSION_PATCH@"
+label docker_docsify_version_revision="@VERSION_REVISION@"
+label docker_docsify_version="@VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_PATCH@.@VERSION_REVISION@"
+
+## Container setup
+run npm install -g @DOCSIFY_CLI_MODULE_NAME@@@DOCSIFY_VERSION@
+run mkdir -p @PREFIX@
+
+## Container dnvironment variables
+env DEBUG @DEBUG@
+env PORT @SERVER_PORT@
+env DOCSIFY_VERSION @DOCSIFY_VERSION@
+env NODE_VERSION @NODE_VERSION@
+
+## Container runtime configuration
+expose @SERVER_PORT@
+workdir @PREFIX@
+
+## Container entry point
+entrypoint [ "@DOCSIFY_CLI_NAME@", "@DOCSIFY_CLI_COMMAND@", "--port", "@SERVER_PORT@" ]
+
+## Container entry point default arguments
+cmd [ "@DOCSIFY_CLI_DEFAULT_PATH@" ]

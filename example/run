@@ -1,0 +1,8 @@
+#!/bin/bash
+docker run                         \
+  --tty                            \
+  --detach                         \
+  --interactive                    \
+  --publish 3000:3000              \
+  --name littlstar.docsify.example \
+  littlstar/docsify/example

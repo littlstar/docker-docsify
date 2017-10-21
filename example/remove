@@ -1,0 +1,4 @@
+#!/bin/bash
+docker stop littlstar.docsify.example
+docker rm --force littlstar.docsify.example
+docker rmi --force littlstar/docsify/example

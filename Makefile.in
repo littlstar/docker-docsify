@@ -1,0 +1,13 @@
+DOCKER := @DOCKER@
+DOCKER_FLAGS += @DOCKER_FLAGS@
+DOCKER_FLAGS += --file @DOCKER_FILE@
+DOCKER_FLAGS += --force-rm # always remove intermdiate containers
+DOCKER_FLAGS += --tag @DOCKER_TAG@
+
+.PHONY: build
+build: @DOCKER_FILE@
+	$(DOCKER) build $(DOCKER_FLAGS) .
+
+.PHONY: clean
+clean:
+	$(DOCKER) rmi -f @DOCKER_TAG@
