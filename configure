@@ -17,7 +17,7 @@ declare -i VERSION_PATCH=0
 declare -i VERSION_REVISION=1
 
 ## Node.js docker container tag version to use
-declare NODE_VERSION='stable'
+declare NODE_VERSION='latest'
 
 ## Server port to listen on
 declare SERVER_PORT=3000

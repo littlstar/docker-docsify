@@ -271,7 +271,7 @@ This can be configured with the `--node-version=VERSION` flag for the
 `./configure` script.
 
 ```Dockerile
-env NODE_VERSION @NODE_VERSION@ # default: NODE_VERSION=stable
+env NODE_VERSION @NODE_VERSION@ # default: NODE_VERSION=latest
 ```
 
 ## License
