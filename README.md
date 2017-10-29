@@ -95,7 +95,7 @@ all template files like `Dockerfile.in` and `Makefile.in`.
 #### Configure template variables
 
 Below are the available template variables in the `./configure` script.
-THey can be accessed in a template (`.in`) file with the syntax
+They can be accessed in a template (`.in`) file with the syntax
 `@VARIABLE_NAME@`.
 
 ```sh
