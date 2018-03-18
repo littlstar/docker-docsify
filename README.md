@@ -17,7 +17,7 @@ You can invoke the container as an executable directly:
 $ docker run \
   --port 3000:3000 \
   --volume /path/to/docs:/usr/local/docsify \
-  littlstar/docsify
+  littlstar/docker-docsify
 ```
 
 `docker-docsify` set the working directory to `/usr/local/docsify` in
@@ -29,7 +29,7 @@ container. By default the container executes `docsify serve --port 3000 .`.
 You can use the image as a base in a `Dockerfile`:
 
 ```Dockerfile
-FROM littlstar/docsify
+FROM littlstar/docker-docsify
 ADD /path/to/docs .
 ```
 
